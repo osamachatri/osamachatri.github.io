@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface FadeInProps {
   children: ReactNode;
@@ -42,6 +42,3 @@ export default function FadeIn({
     </motion.div>
   );
 }
-
-
-
