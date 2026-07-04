@@ -1,4 +1,5 @@
-import { useRef, useState, ReactNode } from "react";
+import { useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 interface SpotlightCardProps {
@@ -6,15 +7,23 @@ interface SpotlightCardProps {
   className?: string;
 }
 
-export default function SpotlightCard({ children, className = "" }: SpotlightCardProps) {
+export default function SpotlightCard({
+  children,
+  className = "",
+}: SpotlightCardProps) {
   const divRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!divRef.current) return;
+
     const rect = divRef.current.getBoundingClientRect();
-    setPosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+
+    setPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
   };
 
   return (
@@ -36,6 +45,3 @@ export default function SpotlightCard({ children, className = "" }: SpotlightCar
     </div>
   );
 }
-
-
-
