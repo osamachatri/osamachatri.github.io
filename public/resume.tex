@@ -1,0 +1,129 @@
+% Compile with: XeLaTeX
+\documentclass[10.5pt,letterpaper]{article}
+
+\usepackage[margin=0.6in,top=0.5in,bottom=0.45in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+
+\setmainfont{TeX Gyre Heros}
+\newfontfamily\condfont{TeX Gyre Heros Cn}[BoldFont={* Bold}]
+
+\definecolor{accent}{HTML}{0F766E}
+\definecolor{ink}{HTML}{101828}
+\definecolor{body}{HTML}{344054}
+\definecolor{muted}{HTML}{667085}
+\definecolor{rule}{HTML}{D0D5DD}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\RaggedRight
+
+\titleformat{\section}
+  {\condfont\bfseries\color{ink}\fontsize{11}{13}\selectfont}
+  {}{0em}
+  {\raisebox{0.5pt}{\tikz\fill[accent](0,0) rectangle (5.5pt,5.5pt);}\hspace{6pt}}
+  [{\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{9pt}{6pt}
+\newcommand{\rsection}[1]{\section*{\MakeUppercase{\hspace{0pt}#1}}}
+
+\setlist[itemize]{
+  leftmargin=12pt, labelsep=6pt, itemsep=2pt, topsep=3pt, parsep=0pt,
+  label={\small\color{accent}\textbullet}
+}
+
+\newcommand{\entryhead}[4]{%
+  {\condfont\bfseries\color{ink}\fontsize{10.3}{12}\selectfont #1}\hfill{\bfseries\small\color{accent}#2}\par
+  {\itshape\small\color{muted}#3}\hfill{\itshape\small\color{muted}#4}\par
+  \vspace{2pt}
+}
+\newcommand{\entrysimple}[2]{%
+  {\condfont\bfseries\color{ink}\fontsize{10.3}{12}\selectfont #1}\hfill{\small\color{muted}#2}\par
+}
+\newcommand{\skillrow}[2]{%
+  {\bfseries\small\color{ink}#1:}~{\small\color{body}#2}\par\vspace{3pt}
+}
+
+\begin{document}
+
+% ══════════════════════ HEADER ══════════════════════
+\begin{center}
+  {\condfont\bfseries\fontsize{30}{30}\selectfont\color{ink}Oussama Chatri}\\[3pt]
+  {\condfont\color{accent}\fontsize{11}{11}\selectfont\MakeUppercase{F\,u\,l\,l\,-\,S\,t\,a\,c\,k\ \,D\,e\,v\,e\,l\,o\,p\,e\,r}}
+\end{center}
+\vspace{6pt}
+{\color{rule}\hrule height 0.6pt}
+\vspace{6pt}
+\begin{center}
+{\small\color{body}
+Biskra, Algeria~~\textcolor{rule}{|}~~+213 667 641 900~~\textcolor{rule}{|}~~%
+\href{mailto:osamachatri@gmail.com}{osamachatri@gmail.com}~~\textcolor{rule}{|}~~%
+\href{https://github.com/osamachatri}{github.com/osamachatri}}
+\end{center}
+\vspace{-4pt}
+
+% ══════════════════════ SUMMARY ══════════════════════
+\rsection{Professional Summary}
+{\small\color{body}
+4th-year Engineering student specializing in Security of Systems, building production-grade software across the full stack. Strong proficiency in Kotlin, Java, Spring Boot, and Jetpack Compose with demonstrated experience delivering desktop applications, Android apps, and backend APIs. Self-learner with a portfolio centered on offline-first architecture and cross-platform development. Open to remote, hybrid, and on-site software engineering opportunities worldwide.
+}
+
+% ══════════════════════ SKILLS ══════════════════════
+\rsection{Technical Skills}
+\skillrow{Languages}{Kotlin, Java, Python \textcolor{muted}{(Familiar: TypeScript, Go, C++)}}
+\skillrow{Frameworks}{Jetpack Compose (Android \& Desktop), Spring Boot, REST APIs}
+\skillrow{Databases}{PostgreSQL, MySQL, Redis, MongoDB}
+\skillrow{Security}{Network Security Fundamentals, Cryptography, Secure Coding Practices, Licensing}
+\skillrow{Tools}{Git, Docker, CI/CD}
+\skillrow{Practices}{Offline-first architecture, cross-platform development, production deployment}
+
+% ══════════════════════ EXPERIENCE ══════════════════════
+\rsection{Experience}
+\entryhead{Software Engineering Intern}{Apr 2026}{Welledge / HDSS --- Algiers, Algeria}{On-site}
+\begin{itemize}
+  \item {\small\color{body}Explored industrial engineering challenges and contributed to the development of engineering solutions supporting decision-making processes}
+  \item {\small\color{body}Gained first-hand exposure to how production-level software is architected, built, and delivered to clients in an enterprise setting}
+  \item {\small\color{body}Learned network and code security practices applied in a production environment, along with software licensing considerations for commercial products}
+\end{itemize}
+
+% ══════════════════════ PROJECTS ══════════════════════
+\rsection{Projects}
+\entrysimple{ProductivityX}{\href{https://github.com/productivityx-app}{github.com/productivityx-app}}
+\vspace{2pt}
+{\small\color{body}Full-stack offline-first productivity system unifying notes, tasks, calendar, Pomodoro timer, and AI assistant. Spring Boot backend serving Android \& Desktop (Jetpack Compose) and Web (TypeScript) frontends with offline sync.}
+\vspace{6pt}
+
+\entrysimple{WellLogAnalyzer}{\href{https://github.com/osamachatri/WellLogAnalyzer}{github.com/osamachatri/WellLogAnalyzer}}
+\vspace{2pt}
+{\small\color{body}Offline hydraulics simulation desktop app for petroleum engineers, built for a technical assessment. Kotlin \& Jetpack Compose Desktop app with a custom hydraulics engine (ECD, APL, bit hydraulics per API RP 13D), interactive 2D charts, a 3D wellbore viewer, and one-click Excel/Word report export, structured with Clean Architecture.}
+\vspace{6pt}
+
+\entrysimple{Depan.Go}{Team project, 2nd year --- ESI SBA}
+\vspace{2pt}
+{\small\color{body}Android app connecting users in remote areas with nearby roadside assistance and on-demand service providers.}
+
+% ══════════════════════ EDUCATION ══════════════════════
+\rsection{Education}
+\entryhead{ENSTA}{2025 -- Present}{École Nationale Supérieure des Technologies Avancées}{}
+{\small\color{body}Engineering degree in Security of Systems --- 4th year, 5-year Engineer program}
+\vspace{6pt}
+
+\entryhead{ESI SBA}{2023 -- 2025}{École Supérieure d'Informatique Sidi Bel Abb\'es}{}
+{\small\color{body}Computer Science --- First 2 years of engineering program}
+
+% ══════════════════════ LANGUAGES ══════════════════════
+\rsection{Languages}
+{\small\color{body}
+\textbf{\color{ink}Arabic} (Native) ~~~
+\textbf{\color{ink}English} (Intermediate) ~~~
+\textbf{\color{ink}French} (Intermediate)
+}
+
+\end{document}
