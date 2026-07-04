@@ -9,19 +9,22 @@ function ScrambleText({ text, className }: { text: string; className?: string })
 
   useEffect(() => {
     let iteration = 0;
+
     const interval = setInterval(() => {
       setDisplay(
         text
           .split("")
-          .map((letter, index) => {
+          .map((_, index) => {
             if (index < iteration) return text[index];
             return chars[Math.floor(Math.random() * chars.length)];
           })
           .join("")
       );
+
       if (iteration >= text.length) clearInterval(interval);
       iteration += 1 / 3;
     }, 30);
+
     return () => clearInterval(interval);
   }, [text]);
 
@@ -33,7 +36,10 @@ export default function Hero() {
     <section className="relative min-h-[100dvh] flex items-center justify-center px-4 pt-16 overflow-hidden">
       <div className="absolute inset-0 blueprint-grid opacity-60" />
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-float"
+        style={{ animationDelay: "2s" }}
+      />
 
       <div className="max-w-3xl mx-auto text-center relative z-10">
         <motion.div
@@ -77,7 +83,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Building offline-first, production-grade systems with Kotlin, Spring Boot, and Jetpack Compose.
+          Building offline-first, production-grade systems with Kotlin, Spring
+          Boot, and Jetpack Compose.
         </motion.p>
 
         <motion.div
@@ -94,6 +101,7 @@ export default function Hero() {
             <Download size={18} className="group-hover:animate-bounce" />
             Download Resume
           </a>
+
           <a
             href="#contact"
             className="group inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-medium rounded-xl hover:border-primary/50 hover:text-primary dark:hover:text-primary hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all duration-300 hover:-translate-y-0.5"
@@ -138,6 +146,3 @@ export default function Hero() {
     </section>
   );
 }
-
-
-
