@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <p className="text-sm font-mono-ui text-slate-500 dark:text-slate-400">
-            Â© {new Date().getFullYear()} Oussama Chatri
+            © {new Date().getFullYear()} Oussama Chatri
           </p>
           <span className="hidden sm:inline text-slate-300 dark:text-slate-700">|</span>
           <p className="text-xs text-slate-400 dark:text-slate-500">
