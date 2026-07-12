@@ -9,9 +9,9 @@ const experiences = [
     period: "April 2026",
     website: "https://welledge.tech/",
     highlights: [
-      "Explored real-world industrial engineering challenges and contributed to engineering solutions that support decision-making in production environments",
-      "Gained first-hand exposure to how production-level software is architected, built, and delivered to clients in an enterprise setting",
-      "Learned network and code security practices applied in production, along with software licensing considerations for commercial products",
+      "Contributed to engineering software supporting industrial decision-making, working alongside senior engineers on production codebases",
+      "Observed and applied enterprise practices for architecting, building, and delivering client-facing software in a regulated industrial setting",
+      "Applied network and code security practices and commercial software licensing considerations used in production systems",
     ],
   },
 ];
@@ -86,6 +86,3 @@ export default function Experience() {
     </section>
   );
 }
-
-
-

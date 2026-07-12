@@ -31,11 +31,11 @@
   {}{0em}
   {\raisebox{0.5pt}{\tikz\fill[accent](0,0) rectangle (5.5pt,5.5pt);}\hspace{6pt}}
   [{\titlerule[0.6pt]}]
-\titlespacing*{\section}{0pt}{9pt}{6pt}
+\titlespacing*{\section}{0pt}{7pt}{4pt}
 \newcommand{\rsection}[1]{\section*{\MakeUppercase{\hspace{0pt}#1}}}
 
 \setlist[itemize]{
-  leftmargin=12pt, labelsep=6pt, itemsep=2pt, topsep=3pt, parsep=0pt,
+  leftmargin=12pt, labelsep=6pt, itemsep=1pt, topsep=2pt, parsep=0pt,
   label={\small\color{accent}\textbullet}
 }
 
@@ -58,62 +58,70 @@
   {\condfont\bfseries\fontsize{30}{30}\selectfont\color{ink}Oussama Chatri}\\[3pt]
   {\condfont\color{accent}\fontsize{11}{11}\selectfont\MakeUppercase{F\,u\,l\,l\,-\,S\,t\,a\,c\,k\ \,D\,e\,v\,e\,l\,o\,p\,e\,r}}
 \end{center}
-\vspace{6pt}
+\vspace{3pt}
 {\color{rule}\hrule height 0.6pt}
-\vspace{6pt}
+\vspace{3pt}
 \begin{center}
 {\small\color{body}
 Biskra, Algeria~~\textcolor{rule}{|}~~+213 667 641 900~~\textcolor{rule}{|}~~%
 \href{mailto:osamachatri@gmail.com}{osamachatri@gmail.com}~~\textcolor{rule}{|}~~%
-\href{https://github.com/osamachatri}{github.com/osamachatri}}
+\href{https://github.com/osamachatri}{github.com/osamachatri}~~\textcolor{rule}{|}~~%
+\href{https://osamachatri.github.io}{osamachatri.github.io}}
 \end{center}
 \vspace{-4pt}
 
 % ══════════════════════ SUMMARY ══════════════════════
 \rsection{Professional Summary}
 {\small\color{body}
-4th-year Engineering student specializing in Security of Systems, building production-grade software across the full stack. Strong proficiency in Kotlin, Java, Spring Boot, and Jetpack Compose with demonstrated experience delivering desktop applications, Android apps, and backend APIs. Self-learner with a portfolio centered on offline-first architecture and cross-platform development. Open to remote, hybrid, and on-site software engineering opportunities worldwide.
+4th-year Systems Security Engineering student who ships production software, not tutorials. Built \textbf{ProductivityX}, a 4-client offline-first productivity platform (Android, Desktop, Web, Spring Boot backend) totaling 100K+ lines of code with JWT-rotated authentication, Redis-backed rate limiting, and real-time sync, plus \textbf{WellLogAnalyzer}, a Kotlin hydraulics-simulation engine for petroleum engineers. Strong in Kotlin, Java, Spring Boot, and Jetpack Compose, with secure-coding practices applied end-to-end rather than left in a textbook. Open to remote, hybrid, and on-site software engineering opportunities worldwide.
 }
 
 % ══════════════════════ SKILLS ══════════════════════
 \rsection{Technical Skills}
 \skillrow{Languages}{Kotlin, Java, Python \textcolor{muted}{(Familiar: TypeScript, Go, C++)}}
-\skillrow{Frameworks}{Jetpack Compose (Android \& Desktop), Spring Boot, REST APIs}
-\skillrow{Databases}{PostgreSQL, MySQL, Redis, MongoDB}
-\skillrow{Security}{Network Security Fundamentals, Cryptography, Secure Coding Practices, Licensing}
-\skillrow{Tools}{Git, Docker, CI/CD}
-\skillrow{Practices}{Offline-first architecture, cross-platform development, production deployment}
+\skillrow{Frameworks}{Jetpack Compose (Android \& Desktop), Spring Boot, Ktor, React, REST \& WebSocket APIs}
+\skillrow{Databases}{PostgreSQL, MySQL, Redis, MongoDB, SQLDelight/Room}
+\skillrow{Security}{JWT auth \& token rotation, BCrypt, Redis rate limiting, secure coding practices, applied cryptography}
+\skillrow{Tools \& Practices}{Git, Docker, CI/CD, Testcontainers, Clean Architecture, offline-first sync design}
 
 % ══════════════════════ EXPERIENCE ══════════════════════
 \rsection{Experience}
 \entryhead{Software Engineering Intern}{Apr 2026}{Welledge / HDSS --- Algiers, Algeria}{On-site}
 \begin{itemize}
-  \item {\small\color{body}Explored industrial engineering challenges and contributed to the development of engineering solutions supporting decision-making processes}
-  \item {\small\color{body}Gained first-hand exposure to how production-level software is architected, built, and delivered to clients in an enterprise setting}
-  \item {\small\color{body}Learned network and code security practices applied in a production environment, along with software licensing considerations for commercial products}
+  \item {\small\color{body}Contributed to engineering software supporting industrial decision-making, working alongside senior engineers on production codebases}
+  \item {\small\color{body}Observed and applied enterprise practices for architecting, building, and delivering client-facing software in a regulated industrial setting}
+  \item {\small\color{body}Applied network and code security practices and commercial software licensing considerations used in production systems \textcolor{muted}{(details limited by NDA)}}
 \end{itemize}
 
 % ══════════════════════ PROJECTS ══════════════════════
 \rsection{Projects}
-\entrysimple{ProductivityX}{\href{https://github.com/productivityx-app}{github.com/productivityx-app}}
+\entrysimple{ProductivityX --- Offline-First Productivity Platform (Android, Desktop, Web, Backend)}{\href{https://github.com/productivityx-app}{github.com/productivityx-app}}
 \vspace{2pt}
-{\small\color{body}Full-stack offline-first productivity system unifying notes, tasks, calendar, Pomodoro timer, and AI assistant. Spring Boot backend serving Android \& Desktop (Jetpack Compose) and Web (TypeScript) frontends with offline sync.}
-\vspace{6pt}
+\begin{itemize}
+  \item {\small\color{body}Designed a 4-client ecosystem (Jetpack Compose Android \& Desktop, React/TypeScript Web) sharing one Spring Boot 4 / Java 21 backend --- 100K+ combined lines of code and 60+ REST endpoints}
+  \item {\small\color{body}Built outbox-pattern offline sync with delta pulls and conflict resolution so every client works fully offline and reconciles silently on reconnect; added WebSocket and SSE streaming for real-time updates and AI chat}
+  \item {\small\color{body}Hardened the API with JWT access/refresh token rotation, BCrypt(12) hashing, SHA-256-hashed token storage, and Redis-backed rate limiting \& idempotency}
+\end{itemize}
+\vspace{3pt}
 
-\entrysimple{WellLogAnalyzer}{\href{https://github.com/osamachatri/WellLogAnalyzer}{github.com/osamachatri/WellLogAnalyzer}}
+\entrysimple{WellLogAnalyzer --- Hydraulics Simulation Desktop App}{\href{https://github.com/osamachatri/WellLogAnalyzer}{github.com/osamachatri/WellLogAnalyzer}}
 \vspace{2pt}
-{\small\color{body}Offline hydraulics simulation desktop app for petroleum engineers, built for a technical assessment. Kotlin \& Jetpack Compose Desktop app with a custom hydraulics engine (ECD, APL, bit hydraulics per API RP 13D), interactive 2D charts, a 3D wellbore viewer, and one-click Excel/Word report export, structured with Clean Architecture.}
-\vspace{6pt}
+\begin{itemize}
+  \item {\small\color{body}Kotlin/Compose Desktop tool for petroleum engineers implementing SPE \& API RP 13D hydraulics equations (Bingham Plastic, Power Law, Herschel-Bulkley), built as a technical assessment project (19K LOC, Clean Architecture)}
+  \item {\small\color{body}Depth-step simulation engine, 2D charts and 3D wellbore viewer, and one-click Excel/Word report export}
+\end{itemize}
+\vspace{3pt}
 
-\entrysimple{Depan.Go}{Team project, 2nd year --- ESI SBA}
+\entrysimple{Depan.Go --- Roadside Assistance Platform}{\href{https://github.com/roadside-assistance-platform}{github.com/roadside-assistance-platform}}
 \vspace{2pt}
-{\small\color{body}Android app connecting users in remote areas with nearby roadside assistance and on-demand service providers.}
+{\small\color{body}Collaborative roadside assistance platform (Android client, provider app, TypeScript backend, admin panel) connecting stranded drivers in remote areas with nearby service providers. Kotlin + Jetpack Compose, built as a team project at ESI SBA.}
+\vspace{-4pt}
 
 % ══════════════════════ EDUCATION ══════════════════════
 \rsection{Education}
 \entryhead{ENSTA}{2025 -- Present}{École Nationale Supérieure des Technologies Avancées}{}
 {\small\color{body}Engineering degree in Security of Systems --- 4th year, 5-year Engineer program}
-\vspace{6pt}
+\vspace{3pt}
 
 \entryhead{ESI SBA}{2023 -- 2025}{École Supérieure d'Informatique Sidi Bel Abb\'es}{}
 {\small\color{body}Computer Science --- First 2 years of engineering program}

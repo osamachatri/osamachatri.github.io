@@ -136,7 +136,7 @@ export default function About() {
                         "Offline-First",
                         "System Security",
                         "Clean Architecture",
-			"Project management",
+                        "Project Management",
                       ].map((tag) => (
                         <span
                           key={tag}

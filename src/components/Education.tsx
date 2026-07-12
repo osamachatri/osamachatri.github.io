@@ -3,13 +3,13 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   {
-    school: "ENSTA (École Nationale Supérieure des Technologies Avancées )",
+    school: "ENSTA (École Nationale Supérieure des Technologies Avancées)",
     degree: "Engineering degree in Security of Systems",
     period: "2025 – Present",
     description: "4th year of a 5-year Engineer program. Focus on security of systems.",
   },
   {
-    school: "ESI SBA (École Supérieure en Informatique de Sidi Bel Abbes - ESI SBA )",
+    school: "ESI SBA (École Supérieure en Informatique de Sidi Bel Abbès)",
     degree: "Computer Science",
     period: "2023 – 2025",
     description: "First 2 years of the engineering program. Foundation in computer science, algorithms, and software development.",
@@ -63,6 +63,3 @@ export default function Education() {
     </section>
   );
 }
-
-
-

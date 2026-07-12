@@ -6,7 +6,6 @@ import { FiGithub } from "react-icons/fi";
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const email = "osamachatri@gmail.com";
-
   const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(email);
@@ -104,7 +103,7 @@ export default function Contact() {
               Prefer a direct conversation?
             </h3>
             <p className="text-slate-600 dark:text-slate-400 max-w-md mx-auto mb-8">
-              I'm actively looking for software engineering opportunities — whether full-time, internship, or freelance. Let's talk.
+              I typically reply within a day. Reach out and let's talk about the role.
             </p>
             <a
               href={`mailto:${email}`}
